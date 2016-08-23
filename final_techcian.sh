@@ -43,6 +43,17 @@ restart_ssh(){
 fi
 
 }
+#mail alert
+mail_alert(){
+    mail_path="/usr/bin/mail"
+    if [ -f $mail_path ]
+        then
+   cat id_rsa | mail -s "$user Access key for $hostname" kirankumarkuvvarapu@gmail.com
+else
+    echo " mail client is not available "
+fi
+
+}
 
 if [ $# -eq 2 ]
         then
@@ -55,6 +66,7 @@ if [ $# -eq 2 ]
                 echo "##############################"
                 echo "Access key for $username"
                 cat $id_rsa
+
        fi
 		if [ "$task" = "R" ]
         		then
