@@ -1,0 +1,15 @@
+---
+ - hosts: server0
+   gather_facts: no
+   become: yes
+   user: kiku
+   tasks:
+      - name: SSH Grant or Revoke Script
+        #shell: ls
+        script: final_techcian.sh {{ item.user }} {{ item.task }}
+        with_items: 
+          - { user: 'mahesh', task: 'R' }
+          - { user: 'Ramesh', task: 'G' }
+          - { user: 'Suresh', task: 'G' }
+      #  register: values
+      #- debug: msg= {{values.stdout}}

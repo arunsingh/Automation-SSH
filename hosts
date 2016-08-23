@@ -1,0 +1,7 @@
+[dev]
+server0 ansible_ssh_host=192.168.0.105 ansible_user=kiku ansible_ssh_pass=kiku
+dev-server2 ansible_ssh_host=192.168.2.14
+dev-server3 ansible_ssh_host=192.168.2.15
+dev-server4 ansible_ssh_host=192.168.2.16
+dev-server5 ansible_ssh_host=192.168.2.17
+dev-server6 ansible_ssh_host=192.168.2.18
